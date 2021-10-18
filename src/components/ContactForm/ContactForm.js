@@ -1,8 +1,20 @@
 import React, { Component } from 'react';
 import { IoIosPersonAdd } from 'react-icons/io';
 import s from './ContactForm.module.css'
-
+import PropTypes from 'prop-types';
 export default class ContactForm extends Component{
+  
+  static propTypes = {
+    onSubmit: PropTypes.func.isRequired,
+  };
+
+  state = {
+    name: '',
+    number: '',
+  };
+  
+  
+
     state={
     name: '',
     number: ''
@@ -55,4 +67,6 @@ export default class ContactForm extends Component{
     </form>
         );
     }
+   
 }
+ 
